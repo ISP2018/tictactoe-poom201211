@@ -113,7 +113,7 @@ public class TicTacToeGame {
 		// Look for N matching pieces on downward diagonal.
 		Player p = pieces[0][0].type;
 		int count = 0;
-		for(int i = 1; i <= boardsize; i++){
+		for(int i = 1; i < boardsize; i++){
 			if (p != Player.NONE && p == pieces[i][i].type) {
 				count++;
 				// all pieces on diagonal occupied by same type (Player)
@@ -127,7 +127,7 @@ public class TicTacToeGame {
 		p = pieces[0][boardsize-1].type; // start at lower-left corner
 		int decrease = boardsize-1;
 		int countTwo = 0;
-		for(int k = 1; k <= boardsize; k++){
+		for(int k = 1; k < boardsize; k++){
 			decrease--;
 			if (p != Player.NONE && p == pieces[k][decrease].type) {
 				countTwo++;
